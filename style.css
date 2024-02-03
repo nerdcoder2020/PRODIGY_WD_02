@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    inset: -50px;
+    background: 
+     repeating-radial-gradient(#000 0 0.0001%,#fff 0 0.0002%) 
+      60% 60%/3000px 3000px,
+     repeating-conic-gradient(#000 0 0.0001%,#fff 0 0.0002%) 
+      40% 40%/4000px 3000px;
+    background-blend-mode: difference;
+    filter: blur(2px) contrast(100) brightness(40);
+    mix-blend-mode: lighten;
+  }
+  
+  body {
+    background: #00DFFC;
+    margin: 0;
+    min-height: 100vh;
+  }
+  
+  html {
+    background: #fff;
+  }
+
+.container{
+    min-width: 500px;
+    width: 40%;
+    height:  auto;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: #fff;
+    background: linear-gradient(225deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+    
+    padding-bottom: 60px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+                rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+                rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+                rgba(0, 0, 0, 0.17) 0px 12px 13px,
+                rgba(0, 0, 0, 0.09) 0px -3px 5px;      
+}
+
+.time-display{
+    width: 100%;
+    background-size: 100% 100%;
+    background-position: 0px 0px,0px 0px;
+    background-image: linear-gradient(55deg, #E8EC11FF 0%, #E8EC11FF 33%, #71C4FFFF 95%),linear-gradient(55deg, #E8EC11FF 0%, #E8EC11FF 33%, #71C4FFFF 95%);
+    padding: 40px 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    border-radius: 30px 30px 0 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    
+}
+
+.laps{
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    margin-top: 10px;
+    text-decoration:none; 
+    width: 100%;
+    list-style:lower-roman;
+    position: relative;
+    overflow:auto
+    /*list-style: none;
+    color: beige;
+    height: 250px;
+    overflow: auto;
+    position: relative;
+    width: 250px;
+    margin-top: 30px;
+    padding: 30px 0;*/
+}
+
+
+
+.main{
+    width: 85%;
+    margin: 0px auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:30px;
+    
+}
+
+.main button{
+    padding: 10px 20px;
+    background-color: #fff;
+    border:none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor:pointer;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+button:hover{
+    background-image: linear-gradient(to bottom, #8300ff, #ab00f6, #ca00ee, #e400e6, #f91cde);
+    border: 2px solid;
+    padding: 12px px;
+    color: #fff;
+    transition: all .2s ease;
+}
